@@ -1,6 +1,6 @@
-# [Website Clone](https://ninjaboynaru.github.io/----Reo Name---/)
+# [Website Clone](https://ninjaboynaru.github.io/Middleman_SiteClone/)
 
-[A responsive website clone]() of [middlemanapp.com](https://middlemanapp.com).
+[A responsive website clone](https://ninjaboynaru.github.io/Middleman_SiteClone/) of [middlemanapp.com](https://middlemanapp.com).
 
 ---
 
