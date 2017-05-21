@@ -1,0 +1,253 @@
+
+/*
+*	MAIN COLORS
+*	yellow: #FBC547
+*	dark-yellow: #b58900
+*	light-blue: #5F80CE
+*	light-blue-2: #4280CA
+*	dark-blue: #446184
+*	faded-blue: #cad6e4
+*
+*	footer-white: #F9F9F9
+*	title-gray: #4a4e56
+*	font-gray: #303238
+*/
+
+
+/*---- BASE ----*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
+
+html, body {
+	width:100%;
+	padding:0;
+	margin:0;
+	font-family:"Open Sans Pro", Helvetica, sans-serif;
+}
+a {
+	cursor:pointer;
+	text-decoration:none;
+}
+
+/*---- MODULE ----*/
+
+.clearfix:before, .clearfix:after, .row:before, .row:after {
+	display:block;
+	content:"";
+}
+.clearfix:after, .row:after { clear:both }
+.clearfix, .row { zoom:1 /* For IE 6/7 (trigger hasLayout) */}
+
+[class *= "col-" ] {
+	float:left;
+	min-height:1px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.col-33 { width:33.3333% }
+.col-50 { width:50% }
+.col-80 { width:80% }
+.img-responsive { max-width:100%; height:auto; display:block }
+
+
+.link { cursor:pointer }
+.link-text-dark { color:#303238 }
+.link-text-dark:hover { color:#4a4e56 }
+.link-text-light { color:#4a4e56 }
+.link-text-light:hover { color:#303238 }
+.link-text-blue { color:#4280ca }
+.link-text-blue:hover { color:#446184 }
+.link-underline:hover { text-decoration:underline }
+
+
+.hero-logo { display:block }
+.hero-logo img {
+	width:40%;
+	height:auto;
+	
+	max-width:230px;
+}
+.hero-title{
+	color:white;
+	font-weight:bold;
+}
+.hero-text {
+	color:#4a4e56; /*Fallback color*/
+	color:rgba(0, 0, 0, 0.45);
+}
+
+
+
+.container-main {
+	padding:0 16px;
+	margin-bottom:40px;
+}
+.container-sub {
+	padding:0 32px;
+	margin:30px 0;
+}
+
+.info-title, .info-text { text-align:center }
+.info-title {
+	color:#4a4e56;
+	font-weight:bold;
+}
+.info-text, .info-text-darker {
+	font-weight:normal;
+	line-height:2;
+	margin:20px 0;
+}
+.info-text { color:#303238 }
+.info-text-darker { color:#4a4e56 }
+
+
+
+.btn {
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	
+	padding:10px;
+	margin-left:5px;
+	margin-right:5px;
+	border-radius:5px;
+}
+.btn-clear {
+	color:#4280CA;
+	background-color:white;
+	background-color:rgba(0,0,0,0);
+	border:1px solid #446184;
+}
+.btn-filled {
+	color:white;
+	background-color:#4280CA;
+	border:none;
+}
+.btn-clear:hover { background-color:#cad6e4 }
+.btn-filled:hover { background-color:#446184 }
+
+
+
+.browser:before {
+	display:block;
+	background:#dedede url("https://middlemanapp.com/images/browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
+	content:"";
+	width:100%;
+	height:30px;
+	border-radius:5px 5px 0 0;
+}
+.browser {
+	display:block;
+	text-align:left;
+}
+.browser-height-sm { height: 50px}
+.browser-height-med { height:150px }
+.browser-body {
+	display:block;
+	padding:16px;
+	line-height:2.5;
+	font-weight:bold;
+	font-family:Consolas, monospace;
+	background-color:#4A4E56;
+	color:white;
+}
+.var { color:#b58900 }
+.code {
+	color:#4a4e56;
+	padding:0 2px;
+	background-color:lightgray;
+	background-color:rgba(0,0,0,0.03);
+}
+
+
+/*---- LAYOUT ----*/
+
+header {
+	position:fixed;
+	width:100%;
+	padding:15px 15px;
+	background-color:#FBC547;
+	
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+nav {
+	display:none;
+	position:absolute;
+	width:100%;
+	top:50px;
+	padding-left:30px;
+	margin-left:-15px;
+	background-color:#FBC547;
+}
+
+.header-spacer { height:50px; content:"" }
+.nav-toggle { float:right }
+.nav-link a { display:block; width:100% }
+
+.nav-link {
+	display:block;
+	width:100%;
+	margin:20px 0;
+	padding:0 0 0 5px;
+	
+	font-size:1.3em;
+}
+.brand-text {
+	float:left;
+	display:block;
+	font-weight:bold;
+}
+
+footer {
+	color:#4a4e56;
+	background-color:#F9F9F9;
+	text-align:center;
+	padding:50px;
+}
+footer a { text-decoration:underline }
+
+/*---- STATE ----*/
+.center-text { text-align:center !important }
+.background-yellow { background-color:#FBC547 !important }
+.width-full { width:100% !important }
+.nofloat-center { 
+	float:none !important;
+	margin-left:auto !important;
+	margin-right:auto !important
+}
+
+
+
+/*---- QUERY ----*/
+@media (min-width:768px) {
+	.container-main {
+		padding:0 48px;
+		margin-bottom:80px;
+	}
+	.info-title, .info-text { text-align:initial }
+	
+	nav {
+		display:block !important;
+		position:static;
+		width:auto;
+		float:right;
+	}
+	.nav-link {
+		display:inline-block;
+		width:auto;
+		margin:0;
+		padding:0 0 0 16px;
+		font-size:1em;
+	}
+	.nav-toggle { display:none !important }
+}
+
+@media (max-width:500px) {
+	.col-33 { width:100% }
+	.col-50 { width:100% }
+}
+
+
